@@ -1,0 +1,186 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  --primary-color: #2ca0ff;
+  --secondary-color: hsl(220, 24%, 12%);
+  --secondary-light: hsl(220, 24%, 15%);
+  --secondary-lighter: hsl(220, 20%, 18%);
+  --white-color: #fff;
+  --body-color: hsl(220, 100%, 97%);
+
+  /*========== Font and typography ==========*/
+  --body-font: "Montserrat", sans-serif;
+  --normal-font-size: 0.938rem;
+  --font-regular: 400;
+  --font-semi-bold: 500;
+  --font-bold: 600;
+
+  /*========== z-index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/*========== Responsive typography ==========*/
+@media screen and (min-width: 1024px) {
+  :root {
+    --normal-font-size: 1rem;
+  }
+}
+
+/*=============== BASE STYLES ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+}
+
+h1 {
+  font-size: 1.8em;
+  font-weight: 600;
+  color: var(--secondary-color);
+  text-align: center;
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 10px;
+  width: 400px;
+  margin: 0 auto;
+}
+
+/*=============== EMPLOYEES CONTAINER ===============*/
+.employees-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.employees-container2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 20px;
+    padding: 20px 110px;
+}
+
+
+/*=============== EMPLOYEE CARD ===============*/
+.employe {
+  background-color: var(--white-color);
+  border-radius: 12px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 350px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 20px;
+  position: relative;
+}
+
+.employe:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+/*=============== EMPLOYEE IMAGE ===============*/
+.infos img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid var(--primary-color);
+  margin-bottom: 10px;
+}
+
+/*=============== EMPLOYEE DETAILS ===============*/
+.infos h2 {
+  margin: 5px 0;
+  font-size: 1.4em;
+  color: var(--secondary-color);
+  font-weight: var(--font-bold);
+}
+
+.infos p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+  color: var(--secondary-lighter);
+}
+
+.contact-info {
+  font-size: 0.85rem;
+  color: var(--secondary-light);
+  margin: 10px 0;
+}
+
+/*=============== PROGRESS CIRCLE ===============*/
+.grafico-bolinha-content {
+  margin-top: 10px;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bordar-grafico {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: conic-gradient(var(--primary-color) calc(var(--percent) * 1%), #f0f8ff calc(var(--percent) * 1%));
+}
+
+.percent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.2em;
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+/*=============== ADDITIONAL INFORMATION ===============*/
+.info-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.info-details p {
+  font-size: 0.85rem;
+  color: var(--secondary-lighter);
+  margin: 5px 0;
+  text-align: center;
+}
+
+/*=============== SOCIAL ICONS ===============*/
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: var(--secondary-color);
+}
